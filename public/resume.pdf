@@ -1,0 +1,32 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 400 >> stream
+BT
+/F1 24 Tf
+50 720 Td (Anoop Danimon - Resume) Tj
+/F1 14 Tf
+0 -30 Td (Data Science Student & Front-End Developer | Thrissur, Kerala) Tj
+/F1 11 Tf
+0 -30 Td (Education: B.Tech CSE Data Science, Christ College of Engineering (2024-2028)) Tj
+0 -20 Td (Roles: Google Student Ambassador, DELTA EXCOM, DevOps Forum CCE) Tj
+0 -20 Td (Awards: Best Physical AI Product (TinkerHub x Google), 2nd Prize Zephyrus 8.0) Tj
+0 -20 Td (GitHub: https://github.com/an00pie | LinkedIn: https://linkedin.com/in/anoop-dani) Tj
+0 -30 Td ([Placeholder Resume PDF: Replace this file with your official resume.pdf]) Tj
+ET
+endstream
+endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000060 00000 n 
+0000000117 00000 n 
+0000000247 00000 n 
+0000000701 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+770
+%%EOF

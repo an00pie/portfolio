@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="zephBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111419"/>
+      <stop offset="100%" stop-color="#080A0E"/>
+    </linearGradient>
+    <radialGradient id="trophyGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7ED957" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#7ED957" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#zephBg)"/>
+
+  <!-- Background decorative rings -->
+  <circle cx="950" cy="400" r="300" fill="url(#trophyGlow)"/>
+  <circle cx="950" cy="400" r="220" stroke="rgba(126,217,87,0.15)" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <!-- Top Bar -->
+  <rect x="60" y="50" width="1080" height="60" rx="8" fill="#161A22" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="90" y="85" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="16" font-weight="700">ZEPHYRUS 8.0 // HACKATHON INNOVATION</text>
+  <rect x="880" y="65" width="235" height="30" rx="15" fill="rgba(126,217,87,0.15)"/>
+  <text x="900" y="85" fill="#7ED957" font-family="Inter, sans-serif" font-size="13" font-weight="600">🏆 2ND PRIZE PODIUM</text>
+
+  <!-- Left Content: Hackathon Architecture & Pitch Summary -->
+  <g transform="translate(60, 140)">
+    <rect width="680" height="580" rx="16" fill="#13171F" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    
+    <!-- Title block -->
+    <text x="40" y="60" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="13" font-weight="600" letter-spacing="2">TEAM S5 CSDS // CHRIST COLLEGE OF ENGINEERING</text>
+    <text x="40" y="100" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="28" font-weight="700">Rapid Prototype to Podium</text>
+    <text x="40" y="130" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="15">Conceived, architected, and pitched during an intensive 24-hour sprint.</text>
+
+    <!-- Team Squad -->
+    <rect x="40" y="165" width="600" height="80" rx="10" fill="#191E28"/>
+    <text x="60" y="195" fill="#7ED957" font-family="Inter, sans-serif" font-size="12" font-weight="600">SQUAD COLLABORATORS</text>
+    <text x="60" y="225" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="15" font-weight="500">Anoop Danimon • Tharun Krishna C U • Alvi A V • John Antony</text>
+
+    <!-- Architecture flow diagram -->
+    <text x="40" y="290" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">SYSTEM ARCHITECTURE</text>
+    
+    <g transform="translate(40, 310)">
+      <!-- Stage 1 -->
+      <rect width="170" height="90" rx="8" fill="#191D26" stroke="rgba(255,255,255,0.1)"/>
+      <text x="20" y="35" fill="#7ED957" font-family="monospace" font-size="12">01: INGESTION</text>
+      <text x="20" y="65" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">Real-Time Data</text>
+
+      <path d="M 175 45 L 205 45" stroke="#7ED957" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- Stage 2 -->
+      <rect x="215" width="170" height="90" rx="8" fill="#191D26" stroke="rgba(126,217,87,0.3)"/>
+      <text x="235" y="35" fill="#7ED957" font-family="monospace" font-size="12">02: CORE LOGIC</text>
+      <text x="235" y="65" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">FastAPI &amp; ML</text>
+
+      <path d="M 390 45 L 420 45" stroke="#7ED957" stroke-width="2"/>
+
+      <!-- Stage 3 -->
+      <rect x="430" width="170" height="90" rx="8" fill="#191D26" stroke="rgba(255,255,255,0.1)"/>
+      <text x="450" y="35" fill="#7ED957" font-family="monospace" font-size="12">03: FRONTEND</text>
+      <text x="450" y="65" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">React UI / Pitch</text>
+    </g>
+
+    <!-- Placeholder notification banner -->
+    <rect x="40" y="440" width="600" height="90" rx="10" fill="#1A1F2B" stroke="rgba(126,217,87,0.2)"/>
+    <text x="60" y="475" fill="#7ED957" font-family="Inter, sans-serif" font-size="13" font-weight="600">NOTE FOR CUSTOMIZATION</text>
+    <text x="60" y="500" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="13">Detailed project problem &amp; solution specs are structured in content.ts</text>
+    <text x="60" y="518" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="13">ready for you to update without touching any React components.</text>
+  </g>
+
+  <!-- Right Side: Trophy / Award Showcase Badge -->
+  <g transform="translate(770, 140)">
+    <rect width="370" height="580" rx="16" fill="#13171F" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+    <!-- Trophy Symbol -->
+    <g transform="translate(135, 80)">
+      <path d="M 30 20 H 70 V 70 C 70 95, 30 95, 30 70 Z" fill="#7ED957"/>
+      <path d="M 15 30 C 5 30, 5 55, 30 55" stroke="#7ED957" stroke-width="4" fill="none"/>
+      <path d="M 85 30 C 95 30, 95 55, 70 55" stroke="#7ED957" stroke-width="4" fill="none"/>
+      <rect x="43" y="90" width="14" height="25" fill="#7ED957"/>
+      <rect x="25" y="115" width="50" height="15" rx="3" fill="#7ED957"/>
+    </g>
+
+    <text x="185" y="270" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="32" font-weight="800">2ND PRIZE</text>
+    <text x="185" y="300" text-anchor="middle" fill="#7ED957" font-family="Inter, sans-serif" font-size="16" font-weight="600">ZEPHYRUS 8.0</text>
+    <text x="185" y="330" text-anchor="middle" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="14">Christ College (Autonomous)</text>
+
+    <line x1="40" y1="365" x2="330" y2="365" stroke="rgba(255,255,255,0.1)"/>
+
+    <g transform="translate(40, 400)">
+      <text y="0" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="13">Competition: Inter-college technical hackathon</text>
+      <text y="30" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="13">Duration: 24-Hour Hack Sprint</text>
+      <text y="60" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="13">Evaluation: Innovation, Prototype, Pitch</text>
+      <text y="90" fill="#7ED957" font-family="Inter, sans-serif" font-size="13" font-weight="600">Outcome: Podium Finish &amp; Cash Prize</text>
+    </g>
+  </g>
+</svg>

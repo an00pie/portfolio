@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="thuzBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1210"/>
+      <stop offset="100%" stop-color="#070908"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7ED957"/>
+      <stop offset="100%" stop-color="#4E9C2C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#thuzBg)"/>
+
+  <!-- Radar / Telemetry Grid Background -->
+  <g opacity="0.12" stroke="#7ED957" stroke-width="1">
+    <circle cx="600" cy="400" r="150"/>
+    <circle cx="600" cy="400" r="280"/>
+    <line x1="600" y1="50" x2="600" y2="750"/>
+    <line x1="150" y1="400" x2="1050" y2="400"/>
+    <line x1="200" y1="150" x2="1000" y2="650"/>
+    <line x1="200" y1="650" x2="1000" y2="150"/>
+  </g>
+
+  <!-- Top System Bar -->
+  <rect x="60" y="50" width="1080" height="60" rx="8" fill="#141916" stroke="rgba(126,217,87,0.2)" stroke-width="1"/>
+  <circle cx="95" cy="80" r="6" fill="#7ED957"/>
+  <text x="120" y="85" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="16" font-weight="700">THUZHAYAN // PHYSICAL AI TELEMETRY</text>
+  <text x="780" y="85" fill="#7ED957" font-family="monospace" font-size="14">STREAMING: 24.8 Hz • ESP32 HUB [ONLINE]</text>
+
+  <!-- Telemetry Waveforms -->
+  <g transform="translate(80, 150)">
+    <!-- Card 1: Stroke Cadence & Roll Angle -->
+    <rect width="500" height="260" rx="12" fill="#131715" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="30" y="45" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="14" font-weight="600">PADDLE STROKE CADENCE (ROWERS 1-32)</text>
+    <path d="M 30 180 Q 90 90, 150 160 T 270 140 T 390 100 T 470 170" fill="none" stroke="#7ED957" stroke-width="3"/>
+    <path d="M 30 200 Q 90 140, 150 190 T 270 170 T 390 150 T 470 190" fill="none" stroke="#4E9C2C" stroke-width="2" stroke-opacity="0.6"/>
+    <text x="30" y="230" fill="#FFFFFF" font-family="monospace" font-size="28" font-weight="700">54.2 <tspan font-size="14" fill="#9CA3AF">SPM</tspan></text>
+    <text x="280" y="230" fill="#7ED957" font-family="monospace" font-size="16">SYNC: 96.4% PEAK</text>
+  </g>
+
+  <!-- Card 2: 6-Axis Motion & Boat Kinematics -->
+  <g transform="translate(620, 150)">
+    <rect width="500" height="260" rx="12" fill="#131715" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="30" y="45" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="14" font-weight="600">MAVLink FLIGHT CONTROLLER // ATTITUDE</text>
+    <!-- Boat roll visualization -->
+    <circle cx="250" cy="140" r="65" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+    <line x1="160" y1="130" x2="340" y2="150" stroke="#7ED957" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="250" cy="140" r="4" fill="#7ED957"/>
+    <text x="30" y="235" fill="#FFFFFF" font-family="monospace" font-size="20">ROLL: +3.8°</text>
+    <text x="240" y="235" fill="#FFFFFF" font-family="monospace" font-size="20">PITCH: -1.2°</text>
+    <text x="400" y="235" fill="#7ED957" font-family="monospace" font-size="14">SAFE</text>
+  </g>
+
+  <!-- Bottom Panel: Edge Gemma + Gemini Insights -->
+  <g transform="translate(80, 440)">
+    <rect width="1040" height="280" rx="12" fill="#131715" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <rect x="30" y="30" width="140" height="30" rx="6" fill="rgba(126,217,87,0.15)"/>
+    <text x="42" y="50" fill="#7ED957" font-family="monospace" font-size="13" font-weight="700">LOCAL GEMMA 2B</text>
+    <text x="190" y="52" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="14">Raspberry Pi 5 Sub-Second Real-Time Edge Processing</text>
+
+    <!-- Console log stream -->
+    <g font-family="monospace" font-size="15" fill="#D1D5DB" transform="translate(30, 100)">
+      <text y="0"><tspan fill="#7ED957">&gt;</tspan> [EDGE AI] Stroke frequency locked at 54 SPM across starboard bank</text>
+      <text y="35"><tspan fill="#7ED957">&gt;</tspan> [MAVLINK] Heel vector stable, roll margin well below critical threshold (cut-off: 28°)</text>
+      <text y="70"><tspan fill="#7ED957">&gt;</tspan> [GEMINI 1.5 FLASH] Post-run insight: Bow rowers lag 42ms on acceleration surge</text>
+      <text y="105"><tspan fill="#7ED957">&gt;</tspan> [STATUS] Best Physical AI Product • TinkerHub x Google for Developers</text>
+    </g>
+
+    <!-- Snake boat graphic outline -->
+    <path d="M 680 230 C 740 225, 820 220, 950 200 C 970 196, 990 180, 1000 170" fill="none" stroke="#7ED957" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="1000" cy="170" r="4" fill="#7ED957"/>
+  </g>
+</svg>

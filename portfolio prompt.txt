@@ -1,0 +1,61 @@
+Build a personal portfolio website for me, Anoop Danimon. Closely replicate the layout, pacing and minimal editorial style of https://ethanclark.framer.ai/ (open it in the browser and study its typography, spacing, scroll behavior, hover states and transitions), but with my own content and branding. Do not copy Ethan Clark's text, images or logos.
+
+## Tech stack
+- Vite + React + TypeScript, Tailwind CSS, Framer Motion, React Router (/, /work, /work/:slug)
+- Mobile-first, responsive, light/dark aware, Lighthouse 90+ for performance and accessibility
+- Deployable on Vercel. Contact form via a serverless function or Formspree, with the endpoint in .env.example
+- All copy lives in one typed file, src/data/content.ts, so I can edit without touching components
+
+## Design direction (match the reference)
+- Minimal, editorial, generous whitespace, huge display type, one accent color. Use a fresh green (#7ED957-ish, from my LinkedIn banner) as the accent on a near-white or near-black base
+- Fixed top nav: Home, About, Work, Contact + small wordmark
+- Hero: full-width "ANOOP" wordmark, portrait image with subtle motion/parallax, one-line intro, "Let's Talk" button
+- Smooth scroll, fade/slide-in on section entry, hover states on project cards, route transitions
+- Footer strip with a live clock (Asia/Kolkata) and an "Available for Work" status dot
+- Same section order as the reference: Hero, Selected Work, About, Services, Recognition strip, Let's Talk
+
+## Content
+
+HERO
+- Name: Anoop Danimon (also shown as Anoop Dani)
+- Intro: "I'm Anoop, a data science student and front-end developer building AI-driven products and clean interfaces with clarity, purpose and character."
+- Location: Thrissur, Kerala, India
+- CTA: Let's Talk
+
+SELECTED WORK (4 cards, "View All" -> /work). Each card links to a /work/:slug case study page with problem, role, stack, outcome and links.
+1. THUZHAYAN — Best Physical AI Product, Google Physical AI Hackathon (Onam Edition, hosted by TinkerHub x Google for Developers). Built with team Hardwired in under 24 hours: an edge AI boat and paddle telemetry system for Vallamkalli (snake boat racing), bringing F1-style race telemetry to Kerala's backwaters. Features: per-rower paddle stroke detection using tilt switches, ESP32 hub streaming live paddle data, MAVLink flight controller for boat GPS/roll/yaw, local Gemma on a Raspberry Pi 5 for real-time edge insights with no cloud dependency, Google Gemini 1.5 Flash for post-run performance analysis, a hardware safety trigger that cuts in on excessive roll, and a live web dashboard. Teammates: Sreeram R, Soorya John, Aryan Baburajan. Repo: https://github.com/an00pie/thuzhayan-physical-ai
+2. BUS SAHAYI — Top 16 teams at the Anavandi Hackathon (School of Future, JAIN, Kochi), built overnight then pitched on a KSRTC coach to Munnar. A public transport complaint app: passengers file complaints with bus number, route, live location and photos and track status with a reference number; each complaint is auto-routed to the depot in charge, where depot heads manage it via a live dashboard; admins get a map of depots colour-coded by pending reports. Teammate: Tharun Krishna C U. Stack: React + TypeScript + Vite. Live: https://anavandi-hack.vercel.app, repo: https://github.com/an00pie/anavandi_hack
+3. PHARMASYSTEM — full-stack pharmaceutical inventory management app (TypeScript). Repo: https://github.com/an00pie/Pharma
+4. ZEPHYRUS 8.0 HACKATHON PROJECT — 2nd Prize at Zephyrus 8.0 at Christ College (Autonomous), Irinjalakuda. Team S5 CSDS: Anoop Danimon, Tharun Krishna C U, Alvi A V, John Antony. Idea turned into a working prototype and pitched within a limited timeframe. [Leave project details as a clearly marked placeholder for me to fill in]
+
+/work (View All) additionally lists: Fly Connectome Simulator (neural activity simulator on FlyWire connectome data), Sales & Marketing Predictive Analytics (Python, Tableau/Power BI, Hadoop/Hive/Spark), meme_nokal (Python), ThreadMatrix (C), Class_Web (CSS), DELTA launch video, and Beachhack Season 7 design work (posters, brochures, media content as part of the media team). Link each to https://github.com/an00pie/<repo> where a repo exists.
+
+ABOUT ME
+- "3rd year B.Tech student in Computer Science & Engineering with a specialization in Data Science at Christ College of Engineering, Irinjalakuda, Kerala (graduating 2028). I work across AI/ML, full-stack development, data science, prompt engineering and API integration, and I like turning hackathon ideas into working products. Beyond code, I design: posters, brochures and visual identities for college events."
+- Roles: Google Student Ambassador (India); Member, DevOps Forum, CCE; Technical Team Member, DS CCE; Event Coordinator, DELTA (Data Oriented Thinkers' Association) EXCOM 2026-27; Class Representative; Industrial Visit Coordinator; mentor to junior students
+- "View Résumé" button -> /resume.pdf (placeholder). Portrait image placeholder
+
+SERVICES (4 items, same layout as the reference)
+- AI & Data Science: predictive models, analytics pipelines and dashboards
+- Full-Stack & Front-End Development: React/TypeScript interfaces with API-driven back ends
+- Physical & Edge AI Prototyping: sensor hardware, local models and live dashboards
+- Graphic & Event Design: posters, brochures and visual identities
+
+RECOGNITION STRIP (replaces the reference's client logos; grayscale text/logo marquee)
+- Best Physical AI Product (TinkerHub x Google for Developers) • 2nd Prize, Zephyrus 8.0 • Top 16, Anavandi Hackathon (JAIN) • Google Student Ambassadors (India) • DELTA CCE • DevOps Forum CCE
+
+LET'S TALK
+- Heading "LET'S TALK" with a short line inviting collaboration
+- Form: Name, Email, Message, Send Message (validation plus success/error states)
+- Social icons: GitHub https://github.com/an00pie, LinkedIn https://www.linkedin.com/in/anoop-dani/, [placeholder: email], [placeholder: Instagram]
+
+## Additional requirements
+- Local placeholder images in /public/images with clear filenames; never hotlink
+- SEO: title, meta description, Open Graph image, sitemap, favicon
+- Accessible: semantic HTML, keyboard navigation, focus states, prefers-reduced-motion support
+- README with setup, how to edit content.ts, and Vercel deploy steps
+
+## Process
+1. Browse the reference site and write a short design-token spec (fonts, sizes, spacing, colors, easing) before coding.
+2. Scaffold, then build sections in order, screenshotting each at desktop and mobile widths to compare with the reference.
+3. At the end, list anything you couldn't replicate and every remaining placeholder.

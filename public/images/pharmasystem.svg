@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="pharmaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1216"/>
+      <stop offset="100%" stop-color="#080A0D"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#pharmaBg)"/>
+
+  <!-- Top bar -->
+  <rect x="60" y="50" width="1080" height="60" rx="8" fill="#151921" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Cross icon -->
+  <path d="M 85 75 H 95 V 65 H 105 V 75 H 115 V 85 H 105 V 95 H 95 V 85 H 85 Z" fill="#7ED957"/>
+  <text x="130" y="85" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="16" font-weight="700">PHARMASYSTEM // INVENTORY &amp; DISPENSATION SUITE</text>
+  <text x="860" y="85" fill="#9CA3AF" font-family="monospace" font-size="14">DATABASE: POSTGRESQL + TYPESCRIPT</text>
+
+  <!-- Left Side: SKU Inventory Table Interface -->
+  <g transform="translate(60, 140)">
+    <rect width="700" height="580" rx="16" fill="#13171F" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    
+    <!-- Header of table -->
+    <rect x="25" y="25" width="650" height="45" rx="8" fill="#1C212B"/>
+    <text x="45" y="53" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12" font-weight="600">BATCH / SKU</text>
+    <text x="220" y="53" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12" font-weight="600">COMPOUND</text>
+    <text x="380" y="53" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12" font-weight="600">EXPIRY DATE</text>
+    <text x="520" y="53" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12" font-weight="600">STOCK (UNITS)</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(25, 85)">
+      <rect width="650" height="70" rx="8" fill="#171B24"/>
+      <text x="20" y="40" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="600">#BT-99201</text>
+      <text x="195" y="32" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">Amoxicillin 500mg</text>
+      <text x="195" y="52" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">Antibiotic • Blister 10x</text>
+      <text x="355" y="40" fill="#7ED957" font-family="monospace" font-size="13">2027-11-30 [VALID]</text>
+      <text x="495" y="40" fill="#FFFFFF" font-family="monospace" font-size="16" font-weight="700">1,420</text>
+      <circle cx="620" cy="35" r="5" fill="#7ED957"/>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(25, 170)">
+      <rect width="650" height="70" rx="8" fill="#171B24"/>
+      <text x="20" y="40" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="600">#BT-84729</text>
+      <text x="195" y="32" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">Atorvastatin 20mg</text>
+      <text x="195" y="52" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">Lipid-lowering • Bottle 30x</text>
+      <text x="355" y="40" fill="#7ED957" font-family="monospace" font-size="13">2028-04-15 [VALID]</text>
+      <text x="495" y="40" fill="#FFFFFF" font-family="monospace" font-size="16" font-weight="700">890</text>
+      <circle cx="620" cy="35" r="5" fill="#7ED957"/>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(25, 255)">
+      <rect width="650" height="70" rx="8" fill="#171B24" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+      <text x="20" y="40" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="600">#BT-61024</text>
+      <text x="195" y="32" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">Azithromycin 250mg</text>
+      <text x="195" y="52" fill="#F59E0B" font-family="Inter, sans-serif" font-size="12">Low Stock Alert (&lt;100 units)</text>
+      <text x="355" y="40" fill="#F59E0B" font-family="monospace" font-size="13">2026-10-10 [30 DAYS]</text>
+      <text x="495" y="40" fill="#F59E0B" font-family="monospace" font-size="16" font-weight="700">45</text>
+      <circle cx="620" cy="35" r="5" fill="#F59E0B"/>
+    </g>
+
+    <!-- Bottom summary row -->
+    <g transform="translate(25, 345)">
+      <rect width="650" height="205" rx="8" fill="#151922"/>
+      <text x="25" y="35" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="600">AUDIT TRAIL &amp; COMPLIANCE LOG</text>
+      <g font-family="monospace" font-size="13" fill="#9CA3AF" transform="translate(25, 70)">
+        <text y="0"><tspan fill="#7ED957">10:42 AM</tspan> • Dispensed 30 units Paracetamol (Rx #9401) — Stock updated</text>
+        <text y="30"><tspan fill="#7ED957">09:15 AM</tspan> • Auto-generated Restock PO #PO-881 for Supplier #12</text>
+        <text y="60"><tspan fill="#7ED957">08:00 AM</tspan> • Automated daily batch expiration scan completed: 0 expired</text>
+        <text y="90"><tspan fill="#7ED957">SYSTEM</tspan> • PostgreSQL connection pool healthy • Prisma ORM active</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Side: Analytics KPIs -->
+  <g transform="translate(790, 140)">
+    <rect width="350" height="580" rx="16" fill="#13171F" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    
+    <text x="30" y="50" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="18" font-weight="700">OPERATIONAL METRICS</text>
+
+    <g transform="translate(30, 90)">
+      <rect width="290" height="120" rx="10" fill="#1A1E26"/>
+      <text x="20" y="35" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">ACTIVE SKUs MANAGED</text>
+      <text x="20" y="75" fill="#7ED957" font-family="monospace" font-size="36" font-weight="700">1,840</text>
+      <text x="20" y="100" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">Across 14 categories</text>
+    </g>
+
+    <g transform="translate(30, 235)">
+      <rect width="290" height="120" rx="10" fill="#1A1E26"/>
+      <text x="20" y="35" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">EXPIRY SHRINKAGE REDUCTION</text>
+      <text x="20" y="75" fill="#FFFFFF" font-family="monospace" font-size="36" font-weight="700">92.4%</text>
+      <text x="20" y="100" fill="#7ED957" font-family="Inter, sans-serif" font-size="12">Near-zero discard rate</text>
+    </g>
+
+    <g transform="translate(30, 380)">
+      <rect width="290" height="160" rx="10" fill="#181B22" stroke="rgba(126,217,87,0.15)"/>
+      <text x="20" y="35" fill="#7ED957" font-family="Inter, sans-serif" font-size="13" font-weight="600">FULL-STACK STACK</text>
+      <text x="20" y="65" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14">• TypeScript &amp; Node.js</text>
+      <text x="20" y="90" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14">• PostgreSQL Database</text>
+      <text x="20" y="115" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14">• React &amp; Tailwind Frontend</text>
+      <text x="20" y="140" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">Role-based access &amp; Audit logging</text>
+    </g>
+  </g>
+</svg>
