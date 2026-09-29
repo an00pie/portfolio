@@ -11,12 +11,15 @@
   html {
     scroll-behavior: smooth;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
   }
 
-  body {
+  body, #root {
     text-rendering: optimizeLegibility;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    min-height: 100vh;
   }
 }
 
@@ -31,12 +34,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(150, 150, 150, 0.2);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(126, 217, 87, 0.5);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 /* Pause marquee on hover */
@@ -46,16 +49,7 @@
 
 /* Accessible focus ring */
 *:focus-visible {
-  outline: 2px solid #7ED957;
+  outline: 2px solid #E80000;
   outline-offset: 3px;
 }
 
-/* Prefers-reduced-motion support */
-@media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}

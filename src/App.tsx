@@ -12,10 +12,10 @@ import { NotFoundPage } from './pages/NotFoundPage';
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <MotionConfig reducedMotion="user">
-        <div className="flex flex-col min-h-screen selection:bg-accent selection:text-black">
+      <MotionConfig reducedMotion="never">
+        <div className="flex flex-col min-h-screen bg-white text-black selection:bg-accent selection:text-white">
           <Navbar />
-          <div className="flex-grow">
+          <div className="flex-grow bg-white">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/work" element={<WorkPage />} />
