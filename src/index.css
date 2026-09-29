@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --accent: #7ED957;
-  --accent-glow: rgba(126, 217, 87, 0.25);
+  --accent: #E80000;
+  --accent-glow: rgba(232, 0, 0, 0.25);
 }
 
 @layer base {
@@ -15,6 +15,8 @@
 
   body {
     text-rendering: optimizeLegibility;
+    background-color: #FFFFFF;
+    color: #000000;
   }
 }
 

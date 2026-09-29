@@ -9,10 +9,11 @@ export default {
     extend: {
       colors: {
         accent: {
-          DEFAULT: '#7ED957',
-          light: '#98e577',
-          dark: '#68be43',
-          glow: 'rgba(126, 217, 87, 0.25)',
+          DEFAULT: '#E80000',
+          crimson: '#E80000',
+          green: '#7ED957',
+          status: '#3CFF00',
+          glow: 'rgba(232, 0, 0, 0.25)',
         },
         dark: {
           base: '#0B0C0E',
@@ -23,10 +24,10 @@ export default {
           'border-hover': 'rgba(255, 255, 255, 0.2)',
         },
         light: {
-          base: '#FBFBFB',
+          base: '#FFFFFF',
           surface: '#FFFFFF',
-          elevated: '#F3F4F6',
-          card: '#F8F9FA',
+          elevated: '#F4F4F5',
+          card: '#FFFFFF',
           border: 'rgba(0, 0, 0, 0.08)',
           'border-hover': 'rgba(0, 0, 0, 0.2)',
         }

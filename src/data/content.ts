@@ -110,7 +110,7 @@ export const content: PortfolioContent = {
     cta: "Let's Talk",
     statusText: "Available for Work",
     timeZone: "Asia/Kolkata",
-    portrait: "/images/portrait.svg",
+    portrait: "/images/portrait.jpg",
   },
   about: {
     heading: "ABOUT ME",
@@ -160,7 +160,7 @@ export const content: PortfolioContent = {
       }
     ],
     resumeUrl: "/resume.pdf",
-    portrait: "/images/portrait.svg",
+    portrait: "/images/portrait.jpg",
   },
   featuredProjects: [
     {
@@ -174,7 +174,7 @@ export const content: PortfolioContent = {
       stack: ["Raspberry Pi 5", "Gemma (Local LLM)", "Google Gemini 1.5 Flash", "ESP32", "MAVLink", "React", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/an00pie/thuzhayan-physical-ai",
       live: null,
-      image: "/images/thuzhayan.svg",
+      image: "/images/thuzhayan.jpg",
       teammates: ["Sreeram R", "Soorya John", "Aryan Baburajan"],
       problem: "Vallamkalli (traditional Kerala snake boat racing) is an iconic heritage sport where up to 100 rowers must pull in unison. Until now, coaches had zero quantitative feedback on individual paddle cadence, boat roll/pitch dynamics, or fatigue breakdown during sprint finishes.",
       solution: "Built in under 24 hours at the Google Physical AI Hackathon (Onam Edition, hosted by TinkerHub x Google for Developers): an edge telemetry system connecting custom tilt switch sensors on rowers' paddles to an ESP32 hub. Combined with a MAVLink flight controller capturing 6-axis boat dynamics, an onboard Raspberry Pi 5 runs a local Google Gemma model for sub-second offline edge insights. In post-run analysis, Google Gemini 1.5 Flash generates tailored coach debriefs. The system also includes an automated tilt safety cut-in trigger.",
@@ -200,7 +200,7 @@ export const content: PortfolioContent = {
       stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "GeoJSON", "REST APIs"],
       github: "https://github.com/an00pie/anavandi_hack",
       live: "https://anavandi-hack.vercel.app",
-      image: "/images/bus-sahayi.svg",
+      image: "/images/bus-sahayi.jpg",
       teammates: ["Tharun Krishna C U"],
       problem: "Kerala public transport commuters face significant friction reporting broken facilities, bus delays, or route issues. Grievances previously landed in disconnected paper logs with no automated routing or passenger status tracking.",
       solution: "A mobile-first grievance platform where passengers submit issues with bus registration number, route, live geo-location, and photos. Each ticket generates a unique tracking reference. The system automatically routes the report to the responsible bus depot. Depot superintendents manage complaints via a live dashboard, while transit executives monitor an interactive state map colour-coded by unresolved reports.",
@@ -225,7 +225,7 @@ export const content: PortfolioContent = {
       stack: ["TypeScript", "React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
       github: "https://github.com/an00pie/Pharma",
       live: null,
-      image: "/images/pharmasystem.svg",
+      image: "/images/pharmasystem.jpg",
       teammates: [],
       problem: "Pharmacies handle thousands of high-turnover medical supplies under strict regulatory compliance. Manual inventory management leads to missed expiration dates, stock discrepancies, and compliance liabilities during state health inspections.",
       solution: "An enterprise-grade inventory system featuring batch-level barcode indexing, dynamic expiration threshold alerts, automated purchase order creation, customer dispensation records, and complete tamper-evident audit logging.",
@@ -249,7 +249,7 @@ export const content: PortfolioContent = {
       stack: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI"],
       github: "https://github.com/an00pie",
       live: null,
-      image: "/images/zephyrus.svg",
+      image: "/images/zephyrus.jpg",
       teammates: ["Tharun Krishna C U", "Alvi A V", "John Antony"],
       problem: "[Project details placeholder — custom problem statement to be configured by Anoop]",
       solution: "Developed an end-to-end working prototype addressing key domain challenges within a tight 24-hour sprint. Delivered live interactive demo to judges and secured 2nd place overall.",

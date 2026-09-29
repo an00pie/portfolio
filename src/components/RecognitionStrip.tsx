@@ -1,34 +1,44 @@
 import React from 'react';
-import { Trophy, Star } from 'lucide-react';
 import { content } from '../data/content';
 
 export const RecognitionStrip: React.FC = () => {
-  // Duplicate array for seamless infinite marquee loop
-  const marqueeItems = [...content.recognition, ...content.recognition];
+  // Client & Recognition Logos (downloaded from reference assets)
+  const logos = [
+    { src: '/images/logos/logo_1.png', alt: 'TinkerHub & Google for Developers' },
+    { src: '/images/logos/logo_2.png', alt: 'Christ College of Engineering' },
+    { src: '/images/logos/logo_3.png', alt: 'Google Student Ambassadors' },
+    { src: '/images/logos/logo_4.png', alt: 'DELTA CCE' },
+    { src: '/images/logos/logo_5.png', alt: 'DevOps Forum CCE' },
+    { src: '/images/logos/logo_6.png', alt: 'Anavandi Hackathon JAIN' },
+    { src: '/images/logos/logo_7.png', alt: 'Beachhack Season 7' },
+    { src: '/images/logos/logo_8.png', alt: 'Zephyrus 8.0' },
+    { src: '/images/logos/logo_9.png', alt: 'Partner' },
+    { src: '/images/logos/logo_10.png', alt: 'Studio' },
+  ];
 
   return (
-    <section className="py-12 border-y border-light-border dark:border-dark-border bg-black/[0.02] dark:bg-white/[0.02] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-neutral-500">
-          <Star className="w-3.5 h-3.5 text-accent" />
-          <span>HONORS, ROLES &amp; RECOGNITION</span>
-        </div>
+    <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto">
+      {/* Section Label matching copy.mp4 Frame 08 */}
+      <div className="mb-4">
+        <h2 className="text-xs sm:text-sm font-semibold text-neutral-400">
+          Clients
+        </h2>
       </div>
 
-      <div className="relative w-full overflow-hidden marquee-container">
-        {/* Left and right gradient fade masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-light-base dark:from-dark-base to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-light-base dark:from-dark-base to-transparent z-10 pointer-events-none" />
-
-        <div className="flex w-max animate-marquee marquee-content items-center gap-8 sm:gap-12 py-3 select-none">
-          {marqueeItems.map((item, idx) => (
+      {/* Row of Square Black Logo Cards matching copy.mp4 */}
+      <div className="relative overflow-hidden w-full">
+        <div className="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none no-scrollbar">
+          {logos.map((logo, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300 font-semibold text-sm sm:text-base tracking-tight whitespace-nowrap hover:text-accent transition-colors cursor-default"
+              className="w-10 sm:w-11 h-10 sm:h-11 bg-black rounded-lg flex items-center justify-center p-2.5 flex-shrink-0 hover:bg-neutral-800 transition-colors shadow-sm"
+              title={logo.alt}
             >
-              <Trophy className="w-4 h-4 text-accent/80 flex-shrink-0" />
-              <span>{item}</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-accent/40 mx-2" />
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="w-full h-full object-contain filter invert opacity-90 hover:opacity-100 transition-opacity"
+              />
             </div>
           ))}
         </div>
@@ -36,3 +46,5 @@ export const RecognitionStrip: React.FC = () => {
     </section>
   );
 };
+
+export default RecognitionStrip;
