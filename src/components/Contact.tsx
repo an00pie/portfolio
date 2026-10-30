@@ -1,209 +1,164 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Instagram, Twitter, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { ArrowUpRight, Github, Instagram, Linkedin, Loader2, Check, Copy } from 'lucide-react';
 import { content } from '../data/content';
 
 export const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error' | 'email'>('idle');
+  const [error, setError] = useState('');
+  const [copied, setCopied] = useState(false);
+  const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+  const configured = endpoint && !endpoint.includes('YOUR_FORM_ID');
+  const emailDraft = `mailto:${content.contact.email}?subject=${encodeURIComponent(`Portfolio enquiry from ${form.name}`)}&body=${encodeURIComponent(`Hi Anoop,\n\n${form.message}\n\n${form.name}\n${form.email}`)}`;
 
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+  const submit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setError('Please fill in your name, email, and message.');
       setStatus('error');
-      setErrorMessage('Please fill in all fields before sending.');
       return;
     }
-
+    if (!configured) {
+      setStatus('email');
+      window.location.href = emailDraft;
+      return;
+    }
     setStatus('loading');
-    setErrorMessage('');
-
-    const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
-
-    if (endpoint && !endpoint.includes('YOUR_FORM_ID')) {
-      try {
-        const res = await fetch(endpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-
-        if (res.ok) {
-          setStatus('success');
-          setFormData({ name: '', email: '', message: '' });
-        } else {
-          const data = await res.json().catch(() => ({}));
-          throw new Error(data.error || 'Failed to submit form.');
-        }
-      } catch (err: any) {
-        setStatus('error');
-        setErrorMessage(err.message || 'Something went wrong. Please email me directly.');
-      }
-    } else {
-      // Mock submit delay for seamless user experience
-      await new Promise((resolve) => setTimeout(resolve, 800));
+    setError('');
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+        signal: AbortSignal.timeout(15000),
+      });
+      if (!response.ok)
+        throw new Error('Your message couldn’t be sent. Please try again or email me directly.');
       setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setForm({ name: '', email: '', message: '' });
+    } catch (reason) {
+      setStatus('error');
+      setError(
+        reason instanceof Error && reason.name === 'TimeoutError'
+          ? 'The request took too long. Please try again or email me directly.'
+          : 'Your message couldn’t be sent. Please try again or email me directly.',
+      );
     }
   };
-
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(content.contact.email);
+      setCopied(true);
+    } catch {
+      setCopied(false);
+    }
+  };
   return (
-    <section id="contact" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      {/* Centered Heading matching copy.mp4 Frame 11 & 12 */}
-      <div className="text-center space-y-2">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-black tracking-tight uppercase">
-          LET'S TALK
-        </h2>
-        <p className="text-neutral-500 text-xs sm:text-sm font-medium max-w-sm mx-auto leading-relaxed">
-          Have a project in mind? Tell me about it and let's see what we can create together.
-        </p>
-
-        {/* Row of 4 Square Black Social Buttons matching copy.mp4 Frame 12 */}
-        <div className="pt-4 flex items-center justify-center gap-2.5">
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 sm:w-10 sm:h-10 bg-black rounded-lg text-white flex items-center justify-center hover:bg-neutral-800 transition-colors shadow-sm"
-            aria-label="Twitter / X"
-          >
-            <span className="font-bold text-xs sm:text-sm">𝕏</span>
-          </a>
-          <a
-            href={content.contact.socials.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 sm:w-10 sm:h-10 bg-black rounded-lg text-white flex items-center justify-center hover:bg-neutral-800 transition-colors shadow-sm"
-            aria-label="Instagram"
-          >
-            <Instagram className="w-4 h-4" />
-          </a>
-          <a
-            href={content.contact.socials.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 sm:w-10 sm:h-10 bg-black rounded-lg text-white flex items-center justify-center hover:bg-neutral-800 transition-colors shadow-sm"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-4 h-4" />
-          </a>
-          <a
-            href={content.contact.socials.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 sm:w-10 sm:h-10 bg-black rounded-lg text-white flex items-center justify-center hover:bg-neutral-800 transition-colors shadow-sm"
-            aria-label="GitHub"
-          >
-            <Github className="w-4 h-4" />
-          </a>
-        </div>
+    <section id="contact" className="contact-content">
+      <header className="page-heading">
+        <h1>
+          Let’s make
+          <br />
+          something good.
+        </h1>
+        <p>{content.contact.subheading}</p>
+      </header>
+      <div className="contact-details">
+        <a href={`mailto:${content.contact.email}`}>
+          {content.contact.email}
+          <ArrowUpRight size={14} />
+        </a>
+        <button aria-label={copied ? 'Email address copied' : 'Copy email address'} onClick={copy}>
+          {copied ? <Check size={14} /> : <Copy size={14} />}
+        </button>
       </div>
-
-      {/* Solid Black Card Form Container matching copy.mp4 Frame 12 & 13 */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="mt-8 max-w-md sm:max-w-lg mx-auto bg-black text-white rounded-2xl p-6 sm:p-8 shadow-2xl"
-      >
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {status === 'success' && (
-            <div className="p-3.5 rounded-lg bg-white/10 text-white flex items-center gap-2.5 text-xs font-medium">
-              <CheckCircle2 className="w-4 h-4 text-[#3CFF00] flex-shrink-0" />
-              <span>Thank you! Your message has been sent successfully.</span>
-            </div>
-          )}
-
+      <div className="contact-socials">
+        {[
+          { href: content.contact.socials.github, label: 'GitHub', Icon: Github },
+          { href: content.contact.socials.linkedin, label: 'LinkedIn', Icon: Linkedin },
+          { href: content.contact.socials.instagram, label: 'Instagram', Icon: Instagram },
+        ].map(({ href, label, Icon }) => (
+          <a href={href} key={label} target="_blank" rel="noopener noreferrer" aria-label={label}>
+            <Icon size={15} strokeWidth={1.5} />
+          </a>
+        ))}
+      </div>
+      <form className="contact-form" onSubmit={submit}>
+        <p className="form-note">A good conversation is a good place to start.</p>
+        <label htmlFor="name">
+          Your name
+          <input
+            autoComplete="name"
+            id="name"
+            name="name"
+            value={form.name}
+            onChange={(event) => setForm({ ...form, name: event.target.value })}
+            required
+            maxLength={120}
+            placeholder="How should I call you?"
+          />
+        </label>
+        <label htmlFor="email">
+          Email address
+          <input
+            autoComplete="email"
+            id="email"
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={(event) => setForm({ ...form, email: event.target.value })}
+            required
+            maxLength={254}
+            placeholder="you@example.com"
+          />
+        </label>
+        <label htmlFor="message">
+          What’s on your mind?
+          <textarea
+            id="message"
+            name="message"
+            value={form.message}
+            onChange={(event) => setForm({ ...form, message: event.target.value })}
+            required
+            maxLength={5000}
+            rows={4}
+            placeholder="A project, a collaboration, or just a hello…"
+          />
+        </label>
+        <div className="form-status" aria-live="polite" aria-atomic="true">
+          {status === 'success' && <p>Thank you. Your message has been sent!</p>}
           {status === 'error' && (
-            <div className="p-3.5 rounded-lg bg-red-500/20 text-red-300 flex items-center gap-2.5 text-xs font-medium">
-              <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-              <span>{errorMessage}</span>
-            </div>
+            <p role="alert">
+              {error} <a href={`mailto:${content.contact.email}`}>Email Anoop</a>
+            </p>
           )}
-
-          {/* Name Field */}
-          <div>
-            <label htmlFor="name" className="block text-[11px] text-neutral-400 font-medium mb-1">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your name"
-              required
-              className="w-full bg-transparent border-b border-neutral-700 py-2 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors"
-            />
-          </div>
-
-          {/* Email Field */}
-          <div>
-            <label htmlFor="email" className="block text-[11px] text-neutral-400 font-medium mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Your email"
-              required
-              className="w-full bg-transparent border-b border-neutral-700 py-2 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors"
-            />
-          </div>
-
-          {/* Message Field */}
-          <div>
-            <label htmlFor="message" className="block text-[11px] text-neutral-400 font-medium mb-1">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={3}
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Tell me about your project..."
-              required
-              className="w-full bg-transparent border-b border-neutral-700 py-2 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors resize-none"
-            />
-          </div>
-
-          {/* White Send Message Button */}
-          <div className="pt-2">
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="bg-white text-black text-xs font-medium px-5 py-2.5 rounded-md hover:bg-neutral-200 transition-colors shadow-sm disabled:opacity-50"
-            >
-              {status === 'loading' ? 'Sending...' : 'Send Message'}
-            </button>
-          </div>
-        </form>
-      </motion.div>
+          {status === 'email' && (
+            <p>
+              Your email draft is ready. Send it from your email app.{' '}
+              <a href={emailDraft}>Open draft again</a>
+            </p>
+          )}
+        </div>
+        <button className="send-button" type="submit" disabled={status === 'loading'}>
+          {status === 'loading' ? (
+            <>
+              <Loader2 size={14} className="loading-spinner" />
+              Sending
+            </>
+          ) : (
+            <>
+              {configured ? 'Send message' : 'Compose email'}
+              <ArrowUpRight size={15} />
+            </>
+          )}
+        </button>
+        {!configured && (
+          <p className="email-disclosure">
+            Opens your email app with your message. Prefer another app? Copy the address above.
+          </p>
+        )}
+      </form>
     </section>
   );
 };
-
 export default Contact;

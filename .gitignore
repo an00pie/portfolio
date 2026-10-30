@@ -31,3 +31,7 @@ dist-ssr
 # Media & Screenshots
 screenshots/
 *.mp4
+*.zip
+
+# Local visual verification captures
+.impeccable/review/

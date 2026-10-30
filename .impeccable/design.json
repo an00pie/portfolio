@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T06:58:25Z",
+  "title": "Design System: Anoop Danimon Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Almost-white Paper", "tonalRamp": ["oklch(15% 0.002 107)", "oklch(26% 0.003 107)", "oklch(38% 0.004 107)", "oklch(50% 0.005 107)", "oklch(62% 0.005 107)", "oklch(74% 0.004 107)", "oklch(86% 0.003 107)", "oklch(95% 0.002 107)"] },
+      "ink": { "role": "neutral", "displayName": "Near-black Ink", "tonalRamp": ["oklch(15% 0.003 125)", "oklch(26% 0.006 125)", "oklch(38% 0.008 125)", "oklch(50% 0.01 125)", "oklch(62% 0.01 125)", "oklch(74% 0.008 125)", "oklch(86% 0.005 125)", "oklch(95% 0.002 125)"] },
+      "muted": { "role": "neutral", "displayName": "Muted Olive-gray", "tonalRamp": ["oklch(15% 0.003 120)", "oklch(26% 0.008 120)", "oklch(38% 0.012 120)", "oklch(50% 0.015 120)", "oklch(62% 0.015 120)", "oklch(74% 0.012 120)", "oklch(86% 0.007 120)", "oklch(95% 0.003 120)"] },
+      "line": { "role": "neutral", "displayName": "Paper Divider", "tonalRamp": ["oklch(15% 0.002 115)", "oklch(26% 0.005 115)", "oklch(38% 0.007 115)", "oklch(50% 0.009 115)", "oklch(62% 0.009 115)", "oklch(74% 0.007 115)", "oklch(86% 0.005 115)", "oklch(95% 0.002 115)"] },
+      "red": { "role": "primary", "displayName": "Brick-red Interaction", "tonalRamp": ["oklch(15% 0.035 34)", "oklch(26% 0.07 34)", "oklch(38% 0.12 34)", "oklch(50% 0.16 34)", "oklch(62% 0.16 34)", "oklch(74% 0.12 34)", "oklch(86% 0.06 34)", "oklch(95% 0.02 34)"] },
+      "dock": { "role": "neutral", "displayName": "Dock Black", "tonalRamp": ["oklch(15% 0.003 125)", "oklch(26% 0.006 125)", "oklch(38% 0.008 125)", "oklch(50% 0.01 125)", "oklch(62% 0.01 125)", "oklch(74% 0.008 125)", "oklch(86% 0.005 125)", "oklch(95% 0.002 125)"] },
+      "room": { "role": "neutral", "displayName": "Room Canvas", "tonalRamp": ["oklch(15% 0.002 107)", "oklch(26% 0.003 107)", "oklch(38% 0.004 107)", "oklch(50% 0.005 107)", "oklch(62% 0.005 107)", "oklch(74% 0.004 107)", "oklch(86% 0.003 107)", "oklch(95% 0.002 107)"] },
+      "reading": { "role": "neutral", "displayName": "Reading Olive-gray", "tonalRamp": ["oklch(15% 0.004 119)", "oklch(26% 0.01 119)", "oklch(38% 0.016 119)", "oklch(50% 0.02 119)", "oklch(62% 0.02 119)", "oklch(74% 0.016 119)", "oklch(86% 0.009 119)", "oklch(95% 0.003 119)"] },
+      "dock-icon": { "role": "neutral", "displayName": "Resting Dock Icon", "tonalRamp": ["oklch(15% 0.004 120)", "oklch(26% 0.009 120)", "oklch(38% 0.014 120)", "oklch(50% 0.018 120)", "oklch(62% 0.018 120)", "oklch(74% 0.014 120)", "oklch(86% 0.008 120)", "oklch(95% 0.003 120)"] },
+      "field-line": { "role": "neutral", "displayName": "Dark Form Baseline", "tonalRamp": ["oklch(15% 0.004 118)", "oklch(26% 0.01 118)", "oklch(38% 0.016 118)", "oklch(50% 0.02 118)", "oklch(62% 0.02 118)", "oklch(74% 0.016 118)", "oklch(86% 0.009 118)", "oklch(95% 0.003 118)"] },
+      "field-placeholder": { "role": "neutral", "displayName": "Field Prompt", "tonalRamp": ["oklch(15% 0.004 119)", "oklch(26% 0.01 119)", "oklch(38% 0.016 119)", "oklch(50% 0.02 119)", "oklch(62% 0.02 119)", "oklch(74% 0.016 119)", "oklch(86% 0.009 119)", "oklch(95% 0.003 119)"] },
+      "field-focus": { "role": "neutral", "displayName": "Field Focus Sage", "tonalRamp": ["oklch(15% 0.005 121)", "oklch(26% 0.012 121)", "oklch(38% 0.02 121)", "oklch(50% 0.026 121)", "oklch(62% 0.026 121)", "oklch(74% 0.02 121)", "oklch(86% 0.012 121)", "oklch(95% 0.004 121)"] },
+      "send-hover": { "role": "neutral", "displayName": "Soft Action Hover", "tonalRamp": ["oklch(15% 0.004 117)", "oklch(26% 0.01 117)", "oklch(38% 0.016 117)", "oklch(50% 0.022 117)", "oklch(62% 0.022 117)", "oklch(74% 0.016 117)", "oklch(86% 0.01 117)", "oklch(95% 0.003 117)"] },
+      "white": { "role": "neutral", "displayName": "Image Overlay White", "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(86% 0 0)", "oklch(95% 0 0)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Editorial Display", "purpose": "General page headings; the poster collection locally overrides size to clamp(60px, 7vw, 96px), or 60px on mobile. This does not replace the shared display token." },
+      "headline": { "displayName": "Section Headline", "purpose": "Archive, biography, and case-study sections." },
+      "lead": { "displayName": "Serif Lead", "purpose": "Biography introduction; case summaries use a slightly larger variant." },
+      "body": { "displayName": "Reading Body", "purpose": "Arial biography and case-study prose." },
+      "label": { "displayName": "Mono Control", "purpose": "Navigation, project filters, form labels, and actions." },
+      "caption": { "displayName": "Mono Caption", "purpose": "File names, years, and supporting metadata. Poster captions use local 10px title / 9px series variants, becoming 9px / 8px on mobile, without changing the shared caption token." },
+      "signature": { "displayName": "Anoop Signature", "purpose": "Mrs Saint Delafield wordmark, aliased as Anoop Signature in CSS." }
+    },
+    "shadows": [
+      { "name": "floating-plane", "value": "8px 15px 22px rgb(0 0 0 / 10%)", "purpose": "Spatial room imagery at rest." },
+      { "name": "floating-plane-hover", "value": "10px 24px 32px rgb(0 0 0 / 18%)", "purpose": "Room image hover and keyboard focus." },
+      { "name": "room-vignette", "value": "inset 0 0 140px 10px rgb(16 17 15 / 15%)", "purpose": "Soft spatial enclosure on desktop." },
+      { "name": "room-vignette-mobile", "value": "inset 0 0 75px rgb(16 17 15 / 12%)", "purpose": "Softer mobile room enclosure." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Shared content, dock, and image transform easing." },
+      { "name": "curtain", "value": "0.85s cubic-bezier(0.76, 0, 0.24, 1) 0.12s", "purpose": "Top-origin black route curtain; omitted for reduced motion." },
+      { "name": "page-entry", "value": "0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s", "purpose": "Page opacity and vertical settle; delay removed for reduced motion." },
+      { "name": "dock-expansion", "value": "0.45s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Dock height and reveal movement." },
+      { "name": "panel-fade", "value": "0.18s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Context panels and inspected image opacity." },
+      { "name": "service-disclosure", "value": "0.3s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Service description height and opacity." },
+      { "name": "work-image", "value": "0.8s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Work-cover scale response." },
+      { "name": "poster-image", "value": "0.7s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Poster thumbnail hover scale to 1.035; brightness dims to 0.85 over 0.5s and the full-view arrow appears on hover/focus." },
+      { "name": "room-angular-response", "value": "1 - exp(-dt / (dragging ? 35 : 150))", "purpose": "Frame-rate-independent angular easing along continuous upper/lower paths without snapping; dt is milliseconds, capped at 50ms." },
+      { "name": "room-pointer-response", "value": "1 - exp(-dt / 220)", "purpose": "Frame-rate-independent pointer smoothing. Manual drag takes priority; capture starts beyond 7px and a drag suppresses pointer-click navigation." },
+      { "name": "room-auto-rotation", "value": "dt * 0.000018", "purpose": "Automatic angular advance after 1200ms without interaction, only when not paused, dragging, hovering/focused, or using reduced motion." },
+      { "name": "reduced-motion-css", "value": "0.01ms", "purpose": "CSS animation and transition duration override; automatic room rotation and parallax also stop in React." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-max", "value": "600px" },
+      { "name": "room-geometry-below", "value": "700px" },
+      { "name": "tablet-max", "value": "900px" },
+      { "name": "wide-min", "value": "1600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Form Action",
+      "kind": "button",
+      "refersTo": "send-button",
+      "description": "Paper action on the black contact form; disabled state indicates sending.",
+      "html": "<div class=\"ds-send-stage\"><button class=\"ds-send\">Compose email <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button></div>",
+      "css": ".ds-send-stage{background:#0d0e0c;padding:26px}.ds-send{display:inline-flex;align-items:center;gap:18px;background:var(--paper,#f7f7f5);color:var(--ink,#10110f);border:0;border-radius:0;padding:13px 16px;font:400 9px var(--mono,'Fragment Mono',monospace);cursor:pointer}.ds-send:hover{background:#dce0d2}.ds-send:focus-visible{outline:2px solid var(--red,#a72e18);outline-offset:5px}.ds-send:disabled{cursor:wait;opacity:.65}"
+    },
+    {
+      "name": "Dock Contact Action",
+      "kind": "button",
+      "refersTo": "dock-contact-button",
+      "description": "Full-width contact link with red/white hover inversion.",
+      "html": "<div class=\"ds-contact-stage\"><a class=\"ds-contact-action\" href=\"/contact\">Message me <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></div>",
+      "css": ".ds-contact-stage{background:#0d0e0c;padding:24px;max-width:278px}.ds-contact-action{display:flex;align-items:center;justify-content:center;gap:16px;background:var(--paper,#f7f7f5);color:var(--ink,#10110f);padding:14px;font:400 9px var(--mono,'Fragment Mono',monospace);text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}.ds-contact-action:hover{background:var(--red,#a72e18);color:white}.ds-contact-action:focus-visible{outline:2px solid var(--red,#a72e18);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-contact-action{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Editorial Text Link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Underlined mono link used for résumé and secondary editorial actions.",
+      "html": "<a class=\"ds-text-link\" href=\"/about\">More about me <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:12px;color:var(--ink,#10110f);font:400 10px var(--mono,'Fragment Mono',monospace);text-decoration:underline;text-underline-offset:5px}.ds-text-link:hover{color:var(--red,#a72e18)}.ds-text-link:focus-visible{outline:2px solid var(--red,#a72e18);outline-offset:5px}"
+    },
+    {
+      "name": "Contact Field",
+      "kind": "input",
+      "refersTo": "contact-field",
+      "description": "Mono label, Arial input, and a fine baseline on the black contact surface.",
+      "html": "<div class=\"ds-field-stage\"><label class=\"ds-field-label\" for=\"ds-email\">Email address<input class=\"ds-field\" id=\"ds-email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\"/></label></div>",
+      "css": ".ds-field-stage{background:#0d0e0c;color:var(--paper,#f7f7f5);padding:35px;max-width:360px}.ds-field-label{display:block;font:400 9px var(--mono,'Fragment Mono',monospace)}.ds-field{display:block;width:100%;border:0;border-bottom:1px solid #56594e;border-radius:0;background:transparent;color:white;font:13px/1.6 Arial,sans-serif;padding:10px 0;margin-top:4px;caret-color:var(--red,#a72e18)}.ds-field::placeholder{color:#a2a69a}.ds-field:focus{border-color:var(--paper,#f7f7f5)}.ds-field:focus-visible{outline:1px solid #c2c8b5;outline-offset:5px}@media(max-width:600px){.ds-field-stage{padding:26px}.ds-field{font-size:16px}}"
+    },
+    {
+      "name": "Centered Icon Dock",
+      "kind": "nav",
+      "refersTo": "navigation-dock",
+      "description": "Resting visual state of the expanding navigation; React owns panel behavior.",
+      "html": "<nav class=\"ds-dock\" aria-label=\"Portfolio navigation\"><a class=\"ds-dock-icon\" href=\"/\" aria-label=\"Home\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"m3 10 9-7 9 7v10H3ZM9 20v-8h6v8\"/></svg></a><a class=\"ds-dock-icon ds-dock-current\" href=\"/work\" aria-label=\"Work\" aria-current=\"page\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"3\" y=\"7\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M8 7V3h8v4M3 12h18M12 10v4\"/></svg></a><a class=\"ds-dock-icon\" href=\"/about\" aria-label=\"About\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"12\" cy=\"8\" r=\"4\"/><path d=\"M5 21v-2a7 7 0 0 1 14 0v2\"/></svg></a><a class=\"ds-dock-icon\" href=\"/contact\" aria-label=\"Contact\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z\"/></svg></a></nav>",
+      "css": ".ds-dock{height:54px;display:flex;align-items:center;justify-content:center;gap:24px;background:#0d0e0c;color:var(--paper,#f7f7f5)}.ds-dock-icon{width:30px;height:30px;display:grid;place-items:center;background:transparent;color:#a7aaa0;border:0;transition:background .18s,color .18s}.ds-dock-icon:hover,.ds-dock-current{background:var(--paper,#f7f7f5);color:var(--ink,#10110f)}.ds-dock-icon:focus-visible{outline:2px solid var(--red,#a72e18);outline-offset:5px}@media(max-width:600px){.ds-dock{gap:22px}}@media(prefers-reduced-motion:reduce){.ds-dock-icon{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Work Category Filter",
+      "kind": "chip",
+      "refersTo": "work-filter",
+      "description": "Text-only category controls with underlined selection, not filled pills.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filter projects\"><button class=\"ds-filter\" aria-pressed=\"true\">All</button><button class=\"ds-filter\" aria-pressed=\"false\">AI &amp; data</button><button class=\"ds-filter\" aria-pressed=\"false\">Web &amp; systems</button><button class=\"ds-filter\" aria-pressed=\"false\">Creative</button></div>",
+      "css": ".ds-filters{display:flex;flex-direction:column;align-items:flex-start;gap:4px}.ds-filter{background:none;border:0;border-radius:0;font:400 9px var(--mono,'Fragment Mono',monospace);text-transform:uppercase;padding:3px 0;color:#62655c;cursor:pointer;transition:color .2s}.ds-filter[aria-pressed=true]{color:var(--ink,#10110f);text-decoration:underline;text-underline-offset:4px}.ds-filter:hover{color:var(--red,#a72e18)}.ds-filter:focus-visible{outline:2px solid var(--red,#a72e18);outline-offset:5px}@media(max-width:600px){.ds-filters{flex-direction:row;flex-wrap:wrap;gap:18px}.ds-filter{min-height:30px;font-size:8px}}@media(prefers-reduced-motion:reduce){.ds-filter{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Project Image and Caption",
+      "kind": "card",
+      "refersTo": "work-image",
+      "description": "Unboxed square-edge project cover; neutral inline artwork stands in for the provenance-tracked source image.",
+      "html": "<article class=\"ds-project\"><a class=\"ds-work-image\" href=\"/work/thuzhayan\" aria-label=\"Explore Thuzhayan\"><svg class=\"ds-work-art\" viewBox=\"0 0 800 500\" role=\"img\" aria-label=\"Neutral artwork placeholder; actual cover is an illustrative interface concept\"><rect width=\"800\" height=\"500\" fill=\"#10130f\"/><path d=\"M100 350h600M100 150h600M100 250h600\" stroke=\"#30342d\"/><path d=\"m100 330 100-80 100 25 100-100 100 90 100-55 100 20\" fill=\"none\" stroke=\"#dedfd9\" stroke-width=\"2\"/></svg><span class=\"ds-work-action\"><span>Explore project</span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></span></a><div class=\"ds-work-caption\"><div>THUZHAYAN<p>Physical &amp; Edge AI Telemetry</p></div><span>2024</span></div></article>",
+      "css": ".ds-project{max-width:540px}.ds-work-image{display:block;position:relative;aspect-ratio:1.6;overflow:hidden;border-radius:0;background:#10130f}.ds-work-art{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1),opacity .5s}.ds-work-action{position:absolute;inset:auto 18px 17px;display:flex;align-items:center;justify-content:space-between;color:white}.ds-work-action>span{padding:6px 10px;font:400 9px var(--mono,'Fragment Mono',monospace);text-transform:uppercase;background:rgb(13 14 12 / 85%);opacity:0;transform:translateY(5px);transition:opacity .25s,transform .25s}.ds-work-action>svg{background:#0d0e0c;padding:5px}.ds-work-image:hover>.ds-work-art,.ds-work-image:focus-visible>.ds-work-art{transform:scale(1.04);opacity:.8}.ds-work-image:hover .ds-work-action>span,.ds-work-image:focus-visible .ds-work-action>span{opacity:1;transform:none}.ds-work-image:focus-visible{outline:2px solid var(--red,#a72e18);outline-offset:5px}.ds-work-caption{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-top:10px;color:var(--ink,#10110f);font:400 9px var(--mono,'Fragment Mono',monospace)}.ds-work-caption p{font-size:8px;color:var(--muted,#64665f);margin:4px 0 0}.ds-work-caption>span{font-size:8px;color:var(--muted,#64665f)}@media(prefers-reduced-motion:reduce){.ds-work-art,.ds-work-action>span{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Service Disclosure Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Ruled service-row appearance; React owns the single-open disclosure state and animation.",
+      "html": "<div class=\"ds-service\"><button class=\"ds-service-button\" aria-expanded=\"false\" aria-controls=\"ds-service-description\">AI &amp; data <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button><div id=\"ds-service-description\" hidden>Service description</div></div>",
+      "css": ".ds-service{border-top:1px solid var(--line,#dedfd9);border-bottom:1px solid var(--line,#dedfd9);color:var(--ink,#10110f)}.ds-service-button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:15px;text-align:left;padding:19px 0;background:transparent;border:0;font:400 12px Arial,sans-serif;cursor:pointer}.ds-service-button svg{flex-shrink:0}.ds-service-button:hover{color:var(--red,#a72e18)}.ds-service-button:focus-visible{outline:2px solid var(--red,#a72e18);outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Floating Collection",
+    "overview": "Projects read as objects in an explorable room, with the interface receding around them. Almost-white paper, light serif typography, compact monospaced controls, square imagery, and a handwritten Anoop signature carry the reference-matched world into quieter reading pages.\n\nThe system pairs spatial play with editorial restraint: depth belongs to the floating image field; project descriptions, biography, and case studies use centered reading columns and thin rules. Black navigation, image inspection, and contact surfaces provide concentrated contrast. The confirmed video reference and finished implementation supply the direction; this is a code-led record, not a concept proposal.",
+    "keyCharacteristics": [
+      "Almost-white paper and near-black ink with restrained red interaction accents.",
+      "Light Spectral headings, utilitarian Arial prose, and compact Fragment Mono controls.",
+      "Square image planes, narrow reading columns, and fine dividers.",
+      "Inertial perspective exploration, expanding black navigation, and curtain page changes.",
+      "Anoop's signature and verified asset provenance instead of borrowed identity."
+    ],
+    "rules": [
+      { "name": "The Quiet Accent Rule", "body": "Red marks interaction and emphasis; the paper canvas and project artwork retain visual priority.", "section": "colors" },
+      { "name": "The Three Voices Rule", "body": "Use Spectral for editorial hierarchy, Arial for prose, and Fragment Mono for controls and metadata; reserve handwriting for the Anoop signature.", "section": "typography" },
+      { "name": "The Spatial Exception Rule", "body": "Keep reading surfaces flat; use perspective and soft shadows for the floating room's image objects.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do preserve paper-and-ink editorial surfaces and use red for interaction emphasis.",
+      "Do pair serif hierarchy with Arial prose and Fragment Mono controls.",
+      "Do retain square imagery, narrow reading columns, and fine ruled lists.",
+      "Do preserve keyboard focus, pressed/expanded state, pause controls, and reduced-motion behavior.",
+      "Do describe interface concepts and visual studies honestly, following ASSETS.md for provenance."
+    ],
+    "donts": [
+      "Don't restore the previous neon palette or dark-theme utility overrides as the active site theme.",
+      "Don't spread floating-room shadows onto editorial cards and reading panels.",
+      "Don't use the signature face as a general heading or body font.",
+      "Don't present illustrative project concepts as verified production screenshots or the illustrated avatar as personal photography."
+    ]
+  }
+}

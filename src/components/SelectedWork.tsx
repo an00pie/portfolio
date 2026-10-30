@@ -4,73 +4,36 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { content } from '../data/content';
 
-export const SelectedWork: React.FC = () => {
-  return (
-    <section id="work" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-      {/* Centered Section Header matching Ethan Clark reference */}
-      <div className="text-center space-y-3 max-w-lg mx-auto">
-        <p className="text-xs sm:text-sm text-neutral-500 font-medium leading-relaxed">
-          A selection of physical AI systems, full-stack platforms, and hackathon prototypes built from ground zero.
-        </p>
-
-        <div className="pt-1">
-          <Link
-            to="/work"
-            className="inline-block bg-black text-white px-4 py-1.5 rounded-full text-xs font-medium hover:bg-neutral-800 transition-colors shadow-sm"
-          >
-            View All
+export const SelectedWork: React.FC = () => (
+  <section id="work" className="mx-auto max-w-7xl px-5 py-24 sm:px-9 sm:py-32">
+    <div className="mb-12 grid gap-6 border-t border-white/15 pt-4 sm:grid-cols-2 sm:items-end">
+      <p className="text-[10px] uppercase tracking-[.16em] text-[#d7ff53]">Selected projects · 2023—2024</p>
+      <div className="sm:justify-self-end sm:text-right">
+        <p className="max-w-sm text-sm leading-6 text-white/65">A selection of physical AI systems, full-stack platforms, and hackathon prototypes built from ground zero.</p>
+        <Link to="/work" className="mt-4 inline-flex items-center gap-2 text-[10px] uppercase tracking-[.14em] text-white transition-colors hover:text-[#d7ff53]">All projects <ArrowUpRight size={14} /></Link>
+      </div>
+    </div>
+    <div className="grid gap-x-6 gap-y-14 md:grid-cols-2">
+      {content.featuredProjects.map((project, index) => (
+        <motion.article key={project.slug} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .15 }} transition={{ duration: .65, delay: index * .08 }} className={index % 2 ? 'md:mt-20' : ''}>
+          <Link to={`/work/${project.slug}`} className="group block">
+            <div className="relative aspect-[16/10] overflow-hidden bg-[#171918]">
+              <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <span className="absolute left-4 top-4 text-[10px] uppercase tracking-[.14em] text-white/70">0{index + 1}</span>
+            </div>
+            <div className="mt-4 flex items-start justify-between border-b border-white/15 pb-4">
+              <div>
+                <h3 className="text-2xl font-light tracking-[-.04em] text-white sm:text-3xl">{project.title}</h3>
+                <p className="mt-1 text-[10px] uppercase tracking-[.12em] text-white/50">{project.category}</p>
+              </div>
+              <ArrowUpRight className="mt-1 text-[#d7ff53] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" size={20} />
+            </div>
           </Link>
-        </div>
-      </div>
-
-      {/* 2x2 Grid of Featured Project Cards */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-        {content.featuredProjects.map((project, idx) => (
-          <motion.div
-            key={project.slug}
-            initial={{ opacity: 0, y: 40, borderRadius: '9999px', scale: 0.92 }}
-            whileInView={{ opacity: 1, y: 0, borderRadius: '16px', scale: 1 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{
-              duration: 0.7,
-              delay: (idx % 2) * 0.1,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="group cursor-pointer flex flex-col"
-          >
-            <Link to={`/work/${project.slug}`} className="block">
-              {/* Preview Image with Morph and Hover Scale */}
-              <div className="relative aspect-[16/11] rounded-2xl overflow-hidden bg-neutral-100 shadow-sm border border-black/5">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Bottom Info Row */}
-              <div className="flex items-start justify-between mt-3 px-0.5">
-                <div>
-                  <h3 className="text-base sm:text-lg font-bold text-black uppercase tracking-tight">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs text-neutral-500 font-medium mt-0.5">
-                    {project.category}
-                  </p>
-                </div>
-
-                {/* Arrow Square Button that turns Crimson on hover */}
-                <div className="w-7 h-7 rounded-md bg-black text-white flex items-center justify-center transition-colors duration-200 group-hover:bg-[#E80000] flex-shrink-0 mt-0.5">
-                  <ArrowUpRight className="w-4 h-4 stroke-[2.2]" />
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-};
+        </motion.article>
+      ))}
+    </div>
+  </section>
+);
 
 export default SelectedWork;
